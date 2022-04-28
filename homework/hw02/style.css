@@ -1,0 +1,166 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+}
+
+header {
+    background: #111;
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+nav {
+    margin-top: 100px;
+    display: inline;   
+}
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+#sidebar{
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+  /* Change the link color on hover */
+a:hover {
+    background-color: rgb(159, 153, 153);
+    color: white;
+}
+
+a:active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+#featured-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.artist-card{
+    width: 18%;
+    height: 38%;
+    border-radius: 10%;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+}
+
+.artist-card:hover {
+    background-color: rgb(159, 153, 153);
+    color: white;
+}
+
+.artist-card:active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.artist-card img{
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    transform: translateY(8%);
+    display: block;
+    margin: auto;
+}
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+/* Your Code Here */
+
+
