@@ -78,13 +78,19 @@ footer {
     background-color: hsla(0,0%,100%,.3);
 }
 
+.selected {
+    text-decoration-line: underline;
+    text-underline-position: left;
+    text-decoration-color: rgb(65, 255, 144) !important;
+    text-decoration-thickness: 3px;
+}
+
 /***************************/
 /* Part A: Left Navigation */
 /***************************/
 
 #sidebar{
     display: flex;
-    justify-content: space-around;
 }
 
 a{
@@ -161,6 +167,46 @@ nav{
 /* Part D: Responsive UIs */
 /**************************/
 
-/* Your Code Here */
+@media (max-width: 1024px) {
+    /* tablet layout here */
+    .container{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.3fr 1fr 1fr 1fr;
+    grid-template-areas: 
+       "a b"
+       "f f"
+       "c d"
+       "e e"
+       "g g";
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    min-height: 100vh;
+    }
+ }
+ 
+ @media screen and (max-width: 600px) {
+    /* phone layout here */
+    .container{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+       "a ."
+       "b b"
+       "c c"
+       "d d"
+       "e e"
+       "g g";
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    min-height: 100vh;
+    }
+    .aside {
+       display: none;
+    }
+ }
 
 
